@@ -1,0 +1,23 @@
+{
+  "name": "formulario-cinematografico",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "@radix-ui/react-label": "latest",
+    "@radix-ui/react-radio-group": "latest",
+    "@radix-ui/react-checkbox": "latest",
+    "lucide-react": "latest",
+    "tailwindcss": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "tailwind-merge": "latest"
+  }
+}
