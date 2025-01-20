@@ -111,3 +111,54 @@ return (
                   <Plus className="w-6 h-6 text-yellow-500" />
                   <h2 className="text-xl font-semibold text-white">Estilo Visual</h2>
                 </div>
+<div className="space-y-6">
+                  <div className="p-4 rounded-lg bg-gray-800">
+                    <Label className="text-white mb-4 block">Iluminação</Label>
+                    <RadioGroup
+                      onValueChange={(value) => handleInputChange('iluminacao', value)}
+                      className="grid grid-cols-2 gap-4"
+                    >
+                      {['Natural e suave', 'Contrastada e dramática', 'Clara e clean', 'Escura e intimista'].map((option) => (
+                        <div key={option} className="relative">
+                          <RadioGroupItem
+                            value={option}
+                            id={option}
+                            className="peer sr-only"
+                          />
+                          <Label
+                            htmlFor={option}
+                            className="flex p-4 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-700 peer-checked:border-yellow-500 peer-checked:bg-yellow-500/10 text-gray-100"
+                          >
+                            {option}
+                          </Label>
+                        </div>
+                      ))}
+                    </RadioGroup>
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-gray-800">
+                    <Label className="text-white mb-4 block">Atmosfera</Label>
+                    <RadioGroup
+                      onValueChange={(value) => handleInputChange('atmosfera', value)}
+                      className="grid grid-cols-2 gap-4"
+                    >
+                      {['Realista e documental', 'Onírica e artística', 'Corporativa tradicional', 'Moderna e dinâmica'].map((option) => (
+                        <div key={option} className="relative">
+                          <RadioGroupItem
+                            value={option}
+                            id={option}
+                            className="peer sr-only"
+                          />
+                          <Label
+                            htmlFor={option}
+                            className="flex p-4 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-700 peer-checked:border-yellow-500 peer-checked:bg-yellow-500/10 text-gray-100"
+                          >
+                            {option}
+                          </Label>
+                        </div>
+                      ))}
+                    </RadioGroup>
+                  </div>
+                </div>
+              </div>
+            )}
