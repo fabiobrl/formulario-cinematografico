@@ -68,3 +68,46 @@ return (
             />
           </div>
         </div>
+<div className="border-0 bg-gray-900 shadow-xl p-6">
+          <form onSubmit={handleSubmit} className="space-y-8">
+            {/* Perfil do Cliente */}
+            {currentSection === 0 && (
+              <div className="space-y-6 animate-fadeIn">
+                <div className="flex items-center space-x-2 mb-6">
+                  <Camera className="w-6 h-6 text-yellow-500" />
+                  <h2 className="text-xl font-semibold text-white">Perfil do Cliente</h2>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="group">
+                    <Label htmlFor="ramo" className="text-gray-100">
+                      Ramo de atuação específico
+                    </Label>
+                    <Input
+                      id="ramo"
+                      onChange={(e) => handleInputChange('ramo', e.target.value)}
+                      className="mt-1 bg-gray-800 border-gray-700 text-white focus:border-yellow-500"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="valores" className="text-gray-100">
+                      Principais valores da sua marca/serviço
+                    </Label>
+                    <Textarea
+                      id="valores"
+                      onChange={(e) => handleInputChange('valores', e.target.value)}
+                      className="mt-1 bg-gray-800 border-gray-700 text-white focus:border-yellow-500"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Estilo Visual */}
+            {currentSection === 1 && (
+              <div className="space-y-6 animate-fadeIn">
+                <div className="flex items-center space-x-2 mb-6">
+                  <Plus className="w-6 h-6 text-yellow-500" />
+                  <h2 className="text-xl font-semibold text-white">Estilo Visual</h2>
+                </div>
